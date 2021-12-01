@@ -24,6 +24,7 @@
             <th>Details</th>
             <th width="280px">Action</th>
         </tr>
+
         @foreach ($products as $product)
         <tr>
             <td>{{ ++$i }}</td>

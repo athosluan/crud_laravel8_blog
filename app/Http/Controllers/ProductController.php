@@ -12,12 +12,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
-        //$products = Product::latest()->paginate(5);
+        $products = Product::latest()->paginate(5);
         
-        return view('products.index');
+        return view('products.index', compact(['products']));
     }
 
     /**
