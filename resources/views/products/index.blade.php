@@ -7,7 +7,7 @@
                 <h2>Laravel 8 CRUD Example for Scratch - Index</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('products.create') }}">Create New Product Now</a>
+                <a class="btn btn-success" href="{{ route('product.create') }}">Create New Product Now</a>
             </div>
         </div>
     </div>
@@ -31,9 +31,9 @@
             <td>{{ $product->name }}</td>
             <td>{{ $product->detail }}</td>
             <td>
-                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
+                <form action="{{ route('product.destroy',$product->id) }}" method="POST">
+                    <a class="btn btn-info" href="{{ route('product.show',$product->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('product.edit',$product->id) }}">Edit</a>
 
                     @csrf
                     @method('DELETE');

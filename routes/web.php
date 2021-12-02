@@ -18,4 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('products', ProductController::class);
+Route::resource('product', ProductController::class);
+
+Route::get('/flaco', function() {
+    $nomes = ['Athos','Ivens','Emilio Coria','Flaco'];
+    $nomes[] = 'NovoValor';
+    return view('products.flaco', compact(['nomes']));
+});
